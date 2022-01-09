@@ -1,4 +1,3 @@
-// import { StatusBar } from 'expo-status-bar';
 import { Image, Text, TouchableOpacity, View, StatusBar } from 'react-native';
 import { Icon } from 'react-native-elements';
 import globalStyles from '../style/globalStyles';

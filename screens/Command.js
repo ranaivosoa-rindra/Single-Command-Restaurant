@@ -1,8 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Image } from 'react-native';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import globalStyles from '../style/globalStyles';
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -38,12 +36,11 @@ export default function Command({navigation}) {
         }
     }
 
-
   return (
     <View style={globalStyles.container}>
         <View style = {globalStyles.commandView}>
             <Text style = {globalStyles.headerText}>
-            Your command is
+            Pending command:
             </Text>
             <View style = {globalStyles.commandResultView}>
                 <Text style = {globalStyles.commandResultText}>

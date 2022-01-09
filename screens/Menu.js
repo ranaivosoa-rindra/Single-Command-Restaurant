@@ -20,7 +20,6 @@ export default function Menu({navigation}) {
     } else {
         try {
             await AsyncStorage.setItem("MyCommand",command);
-            console.log("Command saved")
         } catch (error) {
             console.log(error);
         }
