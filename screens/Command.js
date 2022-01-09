@@ -1,24 +1,40 @@
 import { StatusBar } from 'expo-status-bar';
+import { TouchableOpacity } from 'react-native';
 import { Image } from 'react-native';
 import { Text, View } from 'react-native';
+import { Icon } from 'react-native-elements';
 import globalStyles from '../style/globalStyles';
 
 export default function Command() {
   return (
     <View style={globalStyles.container}>
-      {/* <Image
-          source={require("../assets/fried-chicken-french-fries-white-plate_n.png")}
-          style = {globalStyles.friedChickenImage}
-      /> */}
-      {/* <Image
-                source={require("../assets/hamburger_lemon.png")}
-                style = {globalStyles.hamburgerImage}
-            /> */}
-    <Image
-        source={require("../assets/newTacos.png")}
-        style = {globalStyles.pitaImage}
-    />
-      <StatusBar style="auto" />
+        <View style = {globalStyles.commandView}>
+            <Text style = {globalStyles.headerText}>
+            Your command is
+            </Text>
+            <View style = {globalStyles.commandResultView}>
+                <Text style = {globalStyles.commandResultText}>
+                    Fried chicken wings
+                </Text>
+            </View>
+        </View>
+        <View style = {globalStyles.deleteView}>
+            <TouchableOpacity
+                onPress={() => console.log("Deleted")}
+                style = {globalStyles.deleteButton}
+            >
+            <Icon
+                name = "trash"
+                type = "font-awesome"
+                size = {24}
+                style = {globalStyles.trashIcon}
+                color = {"#fff"}
+            />
+                <Text style = {globalStyles.deleteText}>
+                Delete command
+                </Text>
+            </TouchableOpacity>
+        </View>
     </View>
   );
 }

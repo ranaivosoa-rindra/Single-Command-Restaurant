@@ -18,7 +18,10 @@ const screens = {
         }
     },
     Command: {
-        screen: Command
+        screen: Command,
+        navigationOptions: {
+            headerShown: false
+        }
     },
 }
 

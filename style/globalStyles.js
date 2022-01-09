@@ -126,6 +126,46 @@ const globalStyles = StyleSheet.create({
         fontSize: 18,
         color: "#D8DACE"
     },
+    commandView:{
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 60
+    },
+    headerText:{
+        color: "#fff",
+        fontSize: 26
+    },
+    commandResultView: {
+        marginTop: 20,
+        backgroundColor: "#E9CD7D",
+        paddingHorizontal: 18,
+        paddingVertical: 18,
+        borderRadius: 25
+    },
+    commandResultText:{
+        color: "#800000",
+        fontSize: 21,
+        fontWeight: "700"
+    },
+    deleteView: {
+        justifyContent: "center",
+        alignItems: "center",
+        flex: 1,
+    },
+    deleteButton:{
+        flexDirection: "row",
+        backgroundColor: "#CD1F01",
+        paddingHorizontal: 25,
+        paddingVertical: 10,
+        borderRadius: 10
+    },
+    trashIcon:{
+        paddingRight: 10,
+    },
+    deleteText:{
+        fontSize: 18,
+        color: "#fff"
+    }
 })
 
 export default globalStyles;

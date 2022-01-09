@@ -184,6 +184,7 @@ export default function Menu({navigation}) {
                 style = {globalStyles.proceedButton}
                 onPress={() => {
                     console.log("Proceed")
+                    navigation.navigate("Command")
                 }}
             >
                 <Text style = {globalStyles.proceedButtonText}>
