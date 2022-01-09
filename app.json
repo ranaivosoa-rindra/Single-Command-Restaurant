@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "AsyncThirdTest",
+    "name": "Command foods",
     "slug": "AsyncThirdTest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon_m.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.rindra.ranaivosoa.singleAsyncCommand"
     },
     "web": {
       "favicon": "./assets/favicon.png"
