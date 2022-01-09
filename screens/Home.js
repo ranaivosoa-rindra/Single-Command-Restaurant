@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { Image, Text, TouchableOpacity, View, StatusBar } from 'react-native';
 import { Icon } from 'react-native-elements';
 import globalStyles from '../style/globalStyles';
 
 export default function Home({navigation}) {
   return (
     <View style={globalStyles.container}>
+      <StatusBar
+        translucent = {true}
+        hidden = {true}
+      />
       <Image
           source={require("../assets/restaurant_logo.png")}
           style = {globalStyles.logoImage}
@@ -27,7 +31,6 @@ export default function Home({navigation}) {
             Menu
         </Text>
         </TouchableOpacity>
-      <StatusBar style="auto" />
     </View>
   );
 }

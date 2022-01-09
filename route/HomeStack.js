@@ -12,7 +12,10 @@ const screens = {
         }
     },
     Menu: {
-        screen: Menu
+        screen: Menu,
+        navigationOptions: {
+            headerShown: false
+        }
     },
     Command: {
         screen: Command
