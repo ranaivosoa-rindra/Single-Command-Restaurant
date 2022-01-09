@@ -3,8 +3,41 @@ import { Image, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-nati
 import { Text, TouchableOpacity, View, KeyboardAvoidingView} from 'react-native';
 import { Icon } from 'react-native-elements';
 import globalStyles from '../style/globalStyles';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from 'react';
 
 export default function Menu({navigation}) {
+  
+  const [command, setCommand] = useState("");
+
+  useEffect(() => {
+      load();
+  },[])
+
+  const save = async() =>  {
+    if(command.length == 0){
+        alert("Write your command please")
+    } else {
+        try {
+            await AsyncStorage.setItem("MyCommand",command);
+            console.log("Command saved")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+  }
+
+  const load = async() => {
+      try {
+        let comm = await AsyncStorage.getItem("MyCommand");
+        if(comm != null){
+            navigation.navigate("Command")
+        }
+      } catch (error) {
+          console.log(error)
+      }
+  }
+
   return (
     <TouchableWithoutFeedback
         onPress={() => {
@@ -179,12 +212,15 @@ export default function Menu({navigation}) {
                 style = {globalStyles.input}
                 placeholder='Your Choice'
                 placeholderTextColor={"#B2B2B2"}
+                onChangeText={(t) => {
+                    setCommand(t)
+                }}
             />
             <TouchableOpacity
                 style = {globalStyles.proceedButton}
                 onPress={() => {
-                    console.log("Proceed")
-                    navigation.navigate("Command")
+                    save();
+                    load();
                 }}
             >
                 <Text style = {globalStyles.proceedButtonText}>

@@ -138,13 +138,16 @@ const globalStyles = StyleSheet.create({
     commandResultView: {
         marginTop: 20,
         backgroundColor: "#E9CD7D",
-        paddingHorizontal: 18,
-        paddingVertical: 18,
-        borderRadius: 25
+        borderRadius: 25,
+        width: "80%",
+        height: 57,
+        justifyContent: "center",
+        alignItems: "center",
+        paddingHorizontal: 15
     },
     commandResultText:{
         color: "#800000",
-        fontSize: 21,
+        fontSize: 19,
         fontWeight: "700"
     },
     deleteView: {

@@ -20,7 +20,7 @@ const screens = {
     Command: {
         screen: Command,
         navigationOptions: {
-            headerTintColor: "#fff",
+            headerTintColor: "#fff", // -> text Color
             headerStyle: {
                 backgroundColor: "#151B54"
             }
