@@ -15,13 +15,16 @@ const screens = {
         screen: Menu,
         navigationOptions: {
             headerShown: false
-        }
+        },
     },
     Command: {
         screen: Command,
         navigationOptions: {
-            headerShown: false
-        }
+            headerTintColor: "#fff",
+            headerStyle: {
+                backgroundColor: "#151B54"
+            }
+        },
     },
 }
 
